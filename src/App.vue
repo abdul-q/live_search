@@ -1,32 +1,48 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
-  </div>
+  <v-app>
+    <v-content>
+      <v-card width="400" class="mx-mx-auto mt-5">
+          <v-card-title>
+            <h2 class="display-1">Add Speaker</h2>
+          </v-card-title>
+          <v-card-text>
+            <v-form>
+                <v-text-field outlined prepend-icon="mdi-account-circle" label="Given Name" readonly filled />
+                <v-text-field outlined prepend-icon="mdi-account-circle" label="Family Name" disabled />
+                <v-text-field outlined prepend-icon="mdi-account-circle" label="Other Names" />
+                <v-text-field
+                  outlined
+                  name="Password"
+                  type="Pasword"
+                  label="Password"
+                  prepend-icon="mdi-lock"
+                  append-icon="mdi-eye"
+                  id="id"
+                />
+                <v-text-field outlined prepend-icon="mdi-comment" label="Reknown" />
+                <v-textarea outlined prepend-icon="mdi-comment" label="Bio" />
+            </v-form>
+          </v-card-text>
+          <v-divider></v-divider>
+          <v-card-actions>
+            <v-btn color="success">Submit</v-btn>
+          </v-card-actions>
+        </v-card>      
+    </v-content>
+  </v-app>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+// import HelloWorld from './components/HelloWorld';
 
-#nav {
-  padding: 30px;
-}
+export default {
+  name: 'App',
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+  components: {
+  },
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+  data: () => ({
+    //
+  }),
+};
+</script>
